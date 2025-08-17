@@ -3,7 +3,7 @@ import { app, auth } from './config/firebase';
 import { createUserWithEmailAndPassword  } from "firebase/auth";
 
 function SignUp() {
-      const [name, setName] = useState('');
+      const [username, setUserName] = useState('');
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
       const [confirmPassword, setConfirmPassword] = useState('');
@@ -22,8 +22,8 @@ function SignUp() {
         <div>
         <h2>Sign Up</h2>
         <form onSubmit={handleUser}>
-          <label>Name: 
-            <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+          <label>Username: 
+            <input type="text" placeholder="Username" value={username} onChange={(e) => setUserName(e.target.value)} required />
           </label>
           <label>Email:
             <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
