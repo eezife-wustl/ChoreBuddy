@@ -5,14 +5,21 @@ todo:
 4. add flask database for chores, chore streak, users
 4. user should be able to access chores/chore streak (connect with flas)
 
-frontend:
-the user can sign up or login to their account
-the user can join a chore group or create a chore group 
-    the user will receive an invite link/code for others to join their chore group
-the user can sign in and view their chores for the week
-the user can sign in and see their chore streak
+Capabilities:
+Accounts:
+    the user can sign up or login to their account
+
+Groups:
+    the user can join a chore group 
+    the user can create a chore group (group leader) 
+        the user will receive an invite link/code for others to join their chore group
+
+Chores:
+the user can view their chores for the week
+the user can view their chore streak
 the user can check if they completed their chore for the day
-the user/chore group leader can assign chores
+the group leader can assign chores
+the user receives a daily push notification reminder to complete their chores
 
 
 activate python env: .\venv\Scripts\activate
