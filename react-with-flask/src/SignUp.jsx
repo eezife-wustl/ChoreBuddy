@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { app, auth } from './config/firebase';
+import { app, auth, db } from './config/firebase';
 import { createUserWithEmailAndPassword  } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore"; 
 
 function SignUp() {
       const [username, setUserName] = useState('');
@@ -12,7 +13,11 @@ function SignUp() {
       e.preventDefault();
       try {
         await createUserWithEmailAndPassword(auth, email, password);
-        alert('User created successfully');
+        const docRef = await addDoc(collection(db, "users"), {
+          username: username,
+          email: email
+        })
+        alert('User created successfully with ID: ', docRef.id);
         } catch (err) {
           console.error(err);
         }
