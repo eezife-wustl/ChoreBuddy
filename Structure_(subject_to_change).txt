@@ -1,0 +1,63 @@
+backend/
+├── app/
+│   ├── __init__.py          # App initialization (Flask app and database setup)
+│   ├── models.py            # Database models (Users, Chores, Admins)
+│   ├── routes.py            # User-facing routes (e.g., login, view chores)
+│   ├── admin_routes.py      # Admin-specific routes (manage users, chores)
+│   ├── notifications.py     # Push notification logic with Firebase Admin SDK
+│   ├── utils.py             # Helper functions (e.g., streak calculations)
+│   └── cron.py              # Scheduled tasks (e.g., reset streaks daily)
+├── migrations/              # Database migrations
+├── requirements.txt         # Backend dependencies
+└── app.py                   # Backend entry point
+
+frontend/
+├── public/
+│   ├── index.html           # Main HTML file
+│   ├── firebase-messaging-sw.js  # Service Worker for push notifications
+│   └── manifest.json        # Web app manifest for PWA support
+├── src/
+│   ├── components/
+│   │   ├── admin/
+│   │   │   ├── AdminDashboard.js    # Admin dashboard overview
+│   │   │   ├── UserManagement.js    # Manage users (CRUD operations)
+│   │   │   ├── ChoreManagement.js   # Assign and view chores
+│   │   │   └── NotificationLog.js   # View and manage notifications
+│   │   ├── user/
+│   │   │   ├── Dashboard.js         # User dashboard (chore, streaks)
+│   │   │   ├── ChoreCard.js         # Display user's chore
+│   │   ├── shared/
+│   │   │   ├── Navbar.js            # Shared navigation bar
+│   │   │   └── Login.js             # Login form for users and admins
+│   ├── context/
+│   │   ├── AuthContext.js           # Context for user authentication
+│   │   └── AdminContext.js          # Context for admin authentication
+│   ├── services/
+│   │   ├── api.js                   # Axios instance for API requests
+│   │   ├── firebase.js              # Firebase push notification setup
+│   │   ├── auth.js                  # Functions for login, registration
+│   │   └── admin.js                 # Admin-specific API interactions
+│   ├── styles/                      # CSS files
+│   ├── App.js                       # Main React app component
+│   ├── index.js                     # Entry point for React
+│   └── routes.js                    # Route definitions for React Router
+├── package.json                     # Frontend dependencies
+
+Database: 
+will store the set up for the chores, users, and their chore streak
+set up with sqlite 
+integrate with Flask
+
+firebase:
+admin and user side
+
+admin: can send out new chores to the users
+can track users and their streaks
+can send messages to users
+
+user:
+thru the admin, each individual user will receive messages
+sometimes customized, sometimes notification
+
+flask: 
+the glue between the sqlite database and the admin/user
