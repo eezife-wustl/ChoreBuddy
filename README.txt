@@ -1,9 +1,9 @@
 todo:
-1. begin building basic front end and hooking with flask backend
+1. begin building basic front end and hooking with firebase backend
 2. add user authentication via firebase
 3. add user sign in via firebase
-4. add flask database for chores, chore streak, users
-4. user should be able to access chores/chore streak (connect with flas)
+4. add firebase database for chores, chore streak, users
+4. user should be able to access chores/chore streak
 
 Capabilities:
 Accounts:
