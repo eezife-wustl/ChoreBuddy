@@ -6,11 +6,13 @@ todo:
 4. user should be able to access chores/chore streak (connect with flas)
 
 frontend:
-the user/admin can sign in and view their chores for the week
-the user/admin can sign in and see their chore streak
-the user/admin can check if they completed their chore for the day
-the admin can sign in and assign chores
-the admin can give users admin priveledes
+the user can sign up or login to their account
+the user can join a chore group or create a chore group 
+    the user will receive an invite link/code for others to join their chore group
+the user can sign in and view their chores for the week
+the user can sign in and see their chore streak
+the user can check if they completed their chore for the day
+the user/chore group leader can assign chores
 
 
 activate python env: .\venv\Scripts\activate
@@ -25,3 +27,4 @@ api requests are forwarded to the backend: http://localhost:5000
 credits:
 https://blog.miguelgrinberg.com/post/create-a-react-flask-project-in-2025
 https://www.freecodecamp.org/news/authenticate-react-app-using-firebase/#heading-step-2-how-to-install-firebase-in-your-project
+https://samuelbankole.medium.com/google-firebase-in-react-1acc64516788
