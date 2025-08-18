@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { app, auth, db } from './config/firebase';
 import { createUserWithEmailAndPassword  } from "firebase/auth";
-import { addDoc, collection } from "firebase/firestore"; 
+import { addDoc, setDoc, collection, doc } from "firebase/firestore"; 
 
 function SignUp() {
       const [username, setUserName] = useState('');
@@ -11,13 +11,17 @@ function SignUp() {
     // To create the user with email and password
     const handleUser = async (e) => {
       e.preventDefault();
+      
       try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        const docRef = await addDoc(collection(db, "users"), {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        const uid = user.uid;
+        await setDoc(doc(db, "users", uid), {
           username: username,
-          email: email
+          email: email,
+          groups: [] //empty array for chore group
         })
-        alert('User created successfully with ID: ', docRef.id);
+        alert('User created successfully with ID: ' + uid);
         } catch (err) {
           console.error(err);
         }
