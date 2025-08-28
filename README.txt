@@ -21,14 +21,7 @@ the user can check if they completed their chore for the day
 the group leader can assign chores
 the user receives a daily push notification reminder to complete their chores
 
-
-activate python env: .\venv\Scripts\activate
-"api": "cd api && venv/bin/flask run --no-debugger"
-changes the api directory and runs the flask run command
-without having to turn on the venv
-
 front end: npm run dev
-back end: npm run api
 
 api requests are forwarded to the backend: http://localhost:5000
 credits:
