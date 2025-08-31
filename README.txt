@@ -5,8 +5,8 @@ todo:
 4. add firebase database for chores, chore streak, users
 4. user should be able to access chores/chore streak
 
-current task: react router to take user from login page to dashboard
-make a homepage component
+current task: create a capable user dashboard
+
 
 Capabilities:
 Accounts:
