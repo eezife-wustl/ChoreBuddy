@@ -17,7 +17,7 @@ function App() {
   // Set up Firebase authentication state listener
   useEffect(() => {
     // onAuthStateChanged fires whenever user logs in, logs out, or on page load
-    // This ensures our app always knows the current authentication status
+    // This ensures the app always knows the current authentication status
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       // currentUser will be null if not logged in, or user object if logged in
       setUser(currentUser);

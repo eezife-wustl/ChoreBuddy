@@ -20,6 +20,7 @@ function SignUp() {
           username: username,
           email: email,
           groups: [] //empty array for chore group
+          
         })
         alert('User created successfully with ID: ' + uid);
         } catch (err) {
